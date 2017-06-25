@@ -5,6 +5,7 @@ import os
 import time
 from datetime import datetime as dt
 import pickle
+import pandas as pd
 
 wiki_url = 'https://en.wikipedia.org/wiki/List_of_American_television_series'
 tmdb_url = 'https://api.themoviedb.org/3/search/tv?api_key='
@@ -78,9 +79,5 @@ for i, show in enumerate(show_list):
                     unique_show_count = 0
                     show_dict[show_name] = a_result
 
-# vote average is the percent that appears on the site.
 with open('shows.pickle', 'wb') as handle:
     pickle.dump(show_dict, handle, protocol=pickle.HIGHEST_PROTOCOL)
-
-# with open('shows.pickle', 'rb') as handle:
-#     show_dict = pickle.load(handle)
