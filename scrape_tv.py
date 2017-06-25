@@ -32,7 +32,7 @@ show_dict = {}
 
 print('I am going to loop through {} shows'.format(len(show_list)))
 for i, show in enumerate(show_list):
-    time.sleep(1)
+    time.sleep(0.3)
     if i % 10 == 0:
         print('I am on show number {}, which is named {}'.format(
             i, show[0]))
