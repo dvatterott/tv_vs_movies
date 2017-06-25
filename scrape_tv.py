@@ -5,7 +5,6 @@ import os
 import time
 from datetime import datetime as dt
 import pickle
-import pandas as pd
 
 wiki_url = 'https://en.wikipedia.org/wiki/List_of_American_television_series'
 tmdb_url = 'https://api.themoviedb.org/3/search/tv?api_key='
