@@ -46,6 +46,8 @@ for year_link in year_list:
 tmdb_key = os.environ['TMDB_key']
 movie_dict = {}
 
+# everything below is duplicated from scrape_tv
+# and should be turned into a function
 print('I am going to loop through {} movies'.format(len(movie_list)))
 for i, movie in enumerate(movie_list):
     time.sleep(0.3)
