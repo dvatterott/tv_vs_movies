@@ -13,9 +13,10 @@ var xCat = "first_air_date",
     rCat = "popularity",
     title = "show_name";
 
-d3.csv("shows.csv", function(data) {
+d3.csv("movies.csv", function(data) {
   data.forEach(function(d) {
-    d.first_air_date = parseTime(d.first_air_date);
+    //d.first_air_date = parseTime(d.first_air_date);
+    d.first_air_date = parseTime(d.release_date);
     d.vote_average = +d.vote_average;
     d.popularity = +d.popularity;
     d.show_name = d.show_name;
@@ -121,7 +122,7 @@ d3.csv("shows.csv", function(data) {
   objects.selectAll(".dot")
       .data(data)
     .enter().append("circle")
-    .filter(function(d) { return d.vote_count > 10 })
+    .filter(function(d) { return d.vote_count > 500 })
       .classed("dot", true)
       .attr("r", function (d) { return 6 * Math.sqrt(d[rCat] / Math.PI); })
       .attr("transform", transform)
